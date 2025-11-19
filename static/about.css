@@ -1,3 +1,4 @@
+/*Establish Body details*/
 body {
     display: flex;
     justify-content: center;
@@ -5,8 +6,9 @@ body {
     background-color: #497D74;
     background-image: url("Assets/feesh64xbg.png");
     font-family: 'Comic Neue';
-    /*zoom: 150%;*/
 }
+/*---------------------------------------------------------*/
+
 /*Grid establishment*/
 .container{
     display: inline-grid;
@@ -26,6 +28,16 @@ body {
     text-align: center;
     padding-top: 2%;
 }
+.nav{
+    /*background-color: orange;*/
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
 .item{
     background-color: #27445D;
     border-radius: 10px;
@@ -38,6 +50,12 @@ body {
 }
 .item2{
     grid-area: 7/2/7/8;
+}
+.item3 {
+    grid-area: 1/2/1/4;
+}
+.item4 {
+    grid-area: 1/4/1/6;
 }
 /*-Main Content Styling-*/
 .mainContent{
@@ -62,6 +80,7 @@ body {
     height: 90px;
     width: 610px;
     display: flex;
+    border-radius: 10px;
     justify-content: center;
     align-items: center; 
     background-image: url("Assets/tackleBox.png");
@@ -81,4 +100,21 @@ body {
 .footerContent-Content > img {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+a:link, a:visited {
+    display: block;
+    width:100px;
+    margin: 5px auto;
+    border-radius: 10px;
+    color: #EFE9D5;
+    background-color: #ff6700;
+    text-decoration: none;
+}
+a:hover, a:active {
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+    background-color: #ff9a00;
+    text-decoration: none;
 }
