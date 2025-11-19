@@ -21,6 +21,10 @@ def serve_image():
 def index():
     return render_template('index.html')
 
+@app.route('/about/')
+def about():
+    return render_template('about.html')
+
 #Run the app
 if __name__ == '__main__':
     os.makedirs(fishtank, exist_ok=True) # Make img directory if it doesnt exist, need a tank for da fish
