@@ -1,6 +1,5 @@
 #Import required libraries
 from flask import Flask, send_from_directory, abort, render_template
-
 import random
 import os 
 
@@ -17,10 +16,12 @@ def serve_image():
     except FileNotFoundError:
         abort(404)
 
+#Home page web app route
 @app.route('/')
 def index():
     return render_template('index.html')
 
+#About page web app rout
 @app.route('/about/')
 def about():
     return render_template('about.html')
