@@ -23,8 +23,26 @@
                         <a href="{{ url_for('blank') }}">blank</a>
                     </div>
                     {% block content %}{% endblock %}
-                    <div class ="badges">
-                        <img src="{{ url_for('static', filename='Assets/badges/panman.png') }}">
+                    <div class="badges">
+                        <div class="carousel" aria-label="badge carousel" tabindex="0">
+                            <div class="carousel-track">
+                                <img src="{{ url_for('static', filename='Assets/badges/panman.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/aquarius.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/dragon.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/runescape.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/wizard101.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/genshin.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/rocks.png') }}">
+                                <!-- duplicate set for seamless looping -->
+                                <img src="{{ url_for('static', filename='Assets/badges/panman.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/aquarius.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/dragon.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/runescape.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/wizard101.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/genshin.png') }}">
+                                <img src="{{ url_for('static', filename='Assets/badges/rocks.png') }}">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
