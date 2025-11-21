@@ -1,7 +1,6 @@
 #Import required libraries
 from flask import Flask, send_from_directory, abort, render_template
-import random
-import os 
+import random, os, requests, json
 
 #Initialize Flask app
 app = Flask(__name__)
@@ -19,7 +18,12 @@ def serve_image():
 #Home page web app route
 @app.route('/')
 def index():
-    return render_template('index.html')
+    APIResponse = requests.get("https://dogapi.dog/api/v2/facts?limit=1")
+    data = json.dumps(APIResponse.json())
+    parse_json = json.loads(data)
+    fact = (parse_json['data'][0]['attributes']['body'])
+    dogFact = f"Dog Fact: {fact}"
+    return render_template('index.html', dogFact=dogFact)
 
 #About page web app rout
 @app.route('/about/')
