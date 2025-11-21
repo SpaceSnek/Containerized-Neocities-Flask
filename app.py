@@ -29,4 +29,4 @@ def about():
 #Run the app
 if __name__ == '__main__':
     os.makedirs(fishtank, exist_ok=True) # Make img directory if it doesnt exist, need a tank for da fish
-    app.run #(debug=True) Run in debug mode for development
+    app.run (debug=True) #Run in debug mode for development
