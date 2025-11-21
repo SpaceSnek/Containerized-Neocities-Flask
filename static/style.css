@@ -124,29 +124,6 @@ a:hover, a:active {
     justify-content: center;
     align-items: center;
 }
-.carousel {
-    width: 590px; 
-    overflow: hidden;
-}
-.carousel-track {
-    display: flex;
-    gap: 12px;
-    align-items: center; 
-    animation: marquee 18s linear infinite;
-}
-.carousel-track img {
-    height: auto;
-    display: block;
-    user-select: none;
-}
-.carousel:hover .carousel-track, .carousel:focus .carousel-track {
-    animation-play-state: paused;
-}
-
-@keyframes marquee {
-from { transform: translateX(0); }
-to   { transform: translateX(-116%); }
-}
 /*Paragraph styling*/
 p {
     padding-left: 10px;
