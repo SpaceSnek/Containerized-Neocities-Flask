@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <title>ShrimplyBetter!</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" type="image/x-icon" href="static/Assets/shimp.ico">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="item item1">
-            <div class="mainContent">
-                <div class="mainContent-Content">
-                    <h1>Blank!</h1>
-                    <img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}"><img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}"><img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}">
-                        <div class="nav">
-                            <a href="{{ url_for('index') }}">Home</a>
-                            <a href="{{ url_for('about') }}">About</a>
-                            <a href="{{ url_for('blank') }}">blank</a>
-                        </div>
-                    <div class ="badges">
-                        <img src="{{ url_for('static', filename='Assets/badges/panman.png') }}">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="item item2">
-            <div class="footer">
-                <div class ="footer-Content">
-                </div>
-            </div>
-        </div>
-        
-    </div>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+    <h1>Blank Page!</h1>
+{% endblock %}
