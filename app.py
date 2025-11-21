@@ -25,6 +25,10 @@ def index():
 @app.route('/about/')
 def about():
     return render_template('about.html')
+#Blank page web app route
+@app.route('/blank/')
+def blank():
+    return render_template('blank.html')
 
 #Run the app
 if __name__ == '__main__':

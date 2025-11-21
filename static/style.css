@@ -73,6 +73,7 @@ body {
     border-radius: 10px;
     overflow:scroll;
     text-align: center;
+    position: relative;
 }
 .footer-Content{
     height: 90px;
@@ -111,7 +112,14 @@ a:hover, a:active {
     background-color: #ff9a00;
 }
 /*---------------------------------------------------------*/
-
+.badges {
+    display: flex;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
 /*Paragraph styling*/
 p {
     padding-left: 10px;
