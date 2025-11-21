@@ -18,13 +18,13 @@ body {
     grid-auto-columns: 100px;
     grid-gap: 5px;
     grid-template-areas:
-        'main main main main main item2 item2 item2'
-        'main main main main main item2 item2 item2'
-        'main main main main main item3 item3 item3'
-        'main main main main main item3 item3 item3'
-        'main main main main main item4 item4 item4'
-        'main main main main main item4 item4 item4'
-        'footer footer footer footer footer footer footer footer';
+        'a main main main main main main b'
+        'a main main main main main main b'
+        'a main main main main main main b'
+        'a main main main main main main b'
+        'a main main main main main main b'
+        'a main main main main main main b'
+        'a footer footer footer footer footer footer b';
     text-align: center;
     padding-top: 2%;
 }
@@ -36,56 +36,18 @@ body {
     align-items: center; 
 }
 .item1 {
-    grid-area: 1/1/7/6;
+    grid-area: main;
 }
 .item2 {
-    grid-area: 1/6/3/9;
-}
-.item3 {
-    grid-area: 3/6/5/9;
-}
-.item4 {
-    grid-area: 5/6/7/9;
-}
-.item5 {
-    grid-area: 7/1/7/9;
+    grid-area: footer;
 }
 /*---------------------------------------------------------*/
 
 /*Establish Content Divs*/
-.leftContent{
+.mainContent{
     height: 610px;
-    width: 505px;
+    width: 610px;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #EFE9D5;
-}
-.trContent{
-    height: 190px;
-    width:295px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #EFE9D5;
-}
-.mrContent{
-    height: 190px;
-    width: 295px;
-    border-radius: 10px;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #EFE9D5;
-}
-.brContent{
-    height: 190px;
-    width: 295px;
-    border-radius: 10px;
-
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -93,7 +55,7 @@ body {
 }
 .footer {
     height: 90px;
-    width: 820px;
+    width: 610px;
     border-radius: 11px;
 
     display: flex;
@@ -104,69 +66,28 @@ body {
 /*---------------------------------------------------------*/
 
 /*Establish ACTUAL content*/
-.leftContent-Content {
-    height: 590px;
-    width: 485px;
+.mainContent-Content {
+    height: 600px;
+    width: 600px;
     border: 2px dashed #71BBB2;
     border-radius: 10px;
     overflow:scroll;
-
     text-align: center;
-}
-.trContent-Content {
-    height: 170px;
-    width: 275px;
-    border: 2px dashed #71BBB2;
-    border-radius: 10px;
-    align-content: center;
-}
-.mrContent-Content {
-    height: 170px;
-    width: 275px;
-    border: 2px dashed #71BBB2;
-    border-radius: 10px;
-
-    background-image: url("https://img1.picmix.com/output/stamp/normal/6/2/9/7/1807926_d2975.gif");
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-}
-a:link, a:visited {
-    display: block;
-    width:100px;
-    margin: 5px auto;
-    border-radius: 10px;
-    color: #EFE9D5;
-    background-color: #ff6700;
-    text-decoration: none;
-}
-a:hover, a:active {
-    display: block;
-    margin: 5px auto;
-    border-radius: 10px;
-    background-color: #ff9a00;
-    text-decoration: none;
-}
-.brContent-Content {
-    height: 170px;
-    width: 275px;
-    border: 2px dashed #71BBB2;
-    border-radius: 10px;
-    align-content: center;
 }
 .footer-Content{
     height: 90px;
-    width: 820px;
-    border-radius: 10px;
+    width: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     background-image: url("Assets/tackleBox.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    
+    background-size: 100% 100%;    
 }
 .footer-Content:active {
   animation-name: example;
   background-image: url("https://wiki.fishingplanet.com/images/c/c0/Longnose_Gar.png");
+    border-radius: 10px;
   background-size: contain;
   background-position: center;
 }
@@ -175,6 +96,20 @@ a:hover, a:active {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+/*nav formatting*/
+a:link, a:visited {
+    display: inline-block;
+    width: 100px;
+    margin: 5px auto;
+    border-radius: 10px;
+    color: #EFE9D5;
+    background-color: #ff6700;
+    text-decoration: none;
+}
+a:hover, a:active {
+    margin: 5px auto;
+    background-color: #ff9a00;
+}
 /*---------------------------------------------------------*/
 
 /*Paragraph styling*/
@@ -182,12 +117,5 @@ p {
     padding-left: 10px;
     padding-right: 10px;
 }
-
-/*Scroll bar test*/
-
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #996244 #935732;
-  }
 
 /*Color palette: https://colorhunt.co/palette/27445d497d7471bbb2efe9d5 */

@@ -4,7 +4,7 @@
     <meta charset='utf-8'>
     <title>ShrimplyBetter!</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-    <link rel="icon" type="image/x-icon" href="static/Assets/feesh.ico">
+    <link rel="icon" type="image/x-icon" href="static/Assets/shimp.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,64 +13,32 @@
 <body>
     <div class="container">
         <div class="item item1">
-            <div class="leftContent">
-                <div class="leftContent-Content">
+            <div class="mainContent">
+                <div class="mainContent-Content">
                     <h1>Welcome to my Website!</h1>
                     <img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}"><img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}"><img src="{{ url_for('static', filename='Assets/worm.png') }}"><img src="{{ url_for('static', filename='Assets/feesh.png') }}"><img src="{{ url_for('static', filename='Assets/can.png') }}"><img src="{{ url_for('static', filename='Assets/angulrar.png') }}"><img src="{{ url_for('static', filename='Assets/goldie.png') }}"><img src="{{ url_for('static', filename='Assets/shimp.png') }}"><img src="{{ url_for('static', filename='Assets/weed.png') }}">
-                    <br>
+                        <div class="nav">
+                            <a href="{{ url_for('index') }}">Home</a>
+                            <a href="{{ url_for('about') }}">About</a>
+                            <a href="{{ url_for('about') }}">Contact Me</a>
+                        </div>
                     <p> This website will host some of my projects, content, and random fun!</p>
                     <p> If you are interested in joining the BlueSky network, please contact me on bluesky!</p>
-                    <br>
                     <p> The content displayed here is TEMPORARY and will host more blog like updates in the future.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
                     <p> i wonder whats in the tackle box...</p>
+                    <div class ="badges">
+                        <img src="{{ url_for('static', filename='Assets/badges/panman.png') }}">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="item item2">
-            <div class="trContent">
-                <div class="trContent-Content">
-                    ============Navigation===========
-                    <a href="{{ url_for('about') }}">about</a>
-                </div>
-            </div>
-        </div>
-        <div class="item item3">
-            <div class="mrContent">
-                <div class="mrContent-Content">
-                    ============more to come===========
-                </div>
-            </div>
-        </div>
-        <div class="item item4">
-            <div class="brContent">
-                <div class="brContent-Content">
-                    ============links===========
-                    <a href="https://www.neopets.com/userlookup.phtml?user=SpaceSn3k" target="_blank" rel="noopener noreferrer">Neopets</a>
-                    <a href="https://bsky.app/profile/spacesnek.shrimplybetter.me" target="_blank" rel="noopener noreferrer">BlueSky</a>
-                    <a href="https://www.tumblr.com/blog/spacesnektumbls" target="_blank" rel="noopener noreferrer">Tumblr</a>
-                    <a href="https://steamcommunity.com/id/SpaceSnek/" target="_blank" rel="noopener noreferrer">Steam</a>
-                    <a href="https://github.com/SpaceSnek/Containerized-Neocities-Flask" target="_blank" rel="noopener noreferrer">Source Code</a>
-                </div>
-            </div>
-        </div>
-        <div class="item item5">
             <div class="footer">
                 <div class ="footer-Content">
                 </div>
             </div>
         </div>
+        
     </div>
     
 </body>
