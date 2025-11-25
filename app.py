@@ -15,6 +15,31 @@ def dogFactFunction():
     parse_json = json.loads(data)
     fact = f"Dog Fact: {parse_json['data'][0]['attributes']['body']}"
     return fact
+
+def get_bsky_posts():
+    client = Client()
+    client.login(credentials.username, credentials.password)
+    target_handle = 'spacesnek.shrimplybetter.me'
+
+    feed = client.app.bsky.feed.get_author_feed({'actor': target_handle, 'limit': 2})
+    formattedPost = []
+    for post_view in feed['feed']:
+        try:
+            record = post_view.post.record
+            postText = record.text
+            embed = post_view.post.embed
+            if hasattr(embed, 'images') and embed.images:
+                embed = embed.images[0].thumb
+            elif hasattr(embed, 'thumbnail') and embed.thumbnail:
+                embed = embed.thumbnail
+                postText = postText + " [Video thumbail, find video on bsky]"
+            else:
+                embed = ""
+            author = post_view.post.author.handle
+            formattedPost.append((author, postText, embed))
+        except KeyError:
+            formattedPost = "This post has been deleted or is not displaying properly."
+    return formattedPost
 #===== End Helper Functions =====#
 
 #===== Establish Routing points =====#
@@ -45,28 +70,8 @@ def blank():
 
 @app.route('/bsky/')
 def bsky():
-    client = Client()
-    client.login(credentials.username, credentials.password)
-    target_handle = 'spacesnek.shrimplybetter.me'
-
-    feed = client.app.bsky.feed.get_author_feed({'actor': target_handle, 'limit': 1})
-    formattedPost = []
-    for post_view in feed['feed']:
-        try:
-            record = post_view.post.record
-            embed = post_view.post.embed
-            try:
-                embed = embed.images[0].thumb
-            except:
-                embed = ""
-                pass
-            author = post_view.post.author.handle
-            postText = record.text
-            postTime = record.created_at
-            formattedPost.append((author, postText, embed, postTime))
-        except KeyError:
-            formattedPost = "This post has been deleted or is not displaying properly."
-    return render_template('bsky.html', posts=formattedPost)
+    posts = get_bsky_posts()
+    return render_template('bsky.html', posts=posts)
 #===== End Routing points =====#
 
 #Run the app
