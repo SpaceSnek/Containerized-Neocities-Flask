@@ -17,7 +17,8 @@ for post_view in feed['feed']:
         author = post_view.post.author.handle
         postText = record.text
         postTime = record.created_at
-        formattedPost = (f"Author: {author}\nText: {postText}\nEmbed: {embed}\nPosted at: {postTime}\n")
+        formattedPost = (author, postText, embed, postTime)
     except KeyError:
         formattedPost = "This post has been deleted or is not displaying properly."
-    print(formattedPost)
+    print(formattedPost[0])
+    print(formattedPost[1])
