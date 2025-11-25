@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # Small python/apline image for running the app 
-FROM python:3.9-alpine
+FROM python:3.15.0a2-alpine3.22
 # Set the working directory to /app
 WORKDIR /app
 # Copy the requirments.txt into the containe

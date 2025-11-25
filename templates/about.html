@@ -1,42 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>About</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="item item1">
-            <div class="mainContent">
-                <div class="mainContent-Content">
-                    <h1>About this site</h1>
-                    <p> This website has been created to be a landing for my projects!</p>
-                    <p> I am a cyber security professional with a joy of technology, 
-                        i love to spend time on new projects, hardware and software alike!
-                    </p>
-                    <p> Originally, this domain was purchased for a vanity BlueSky handle, however
-                        i plan to expan it to host additional projects and content in the future!
-                    </p>
-                    <br>
-                    <p> Feel free to reach out to me on BlueSky if you have any questions or if you want to join the 
-                        shrimplybetter.me BlueSky network!
-                </div>
-            </div>
-        </div>
-        <div class="item item2">
-            <div class="item item2">
-                <div class="footerContent">
-                </div>
-            </div>
-        </div>
-        <div class="nav item3">
-            <a href="{{ url_for('index') }}">Go Back!</a>
-        </div>
-    </div>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}
+    <h1>About this site</h1>
+{% endblock %}
+{% block content %}
+    <p> This website has been created to be a landing for my projects!</p>
+    <p> I am a cyber security professional with a joy of technology, 
+        i love to spend time on new projects, hardware and software alike!
+    </p>
+    <p> Originally, this domain was purchased for a vanity BlueSky handle, however
+        i plan to expan it to host additional projects and content in the future!
+    </p>
+    <br>
+    <p> Feel free to reach out to me on BlueSky if you have any questions or if you want to join the 
+        shrimplybetter.me BlueSky network!
+    </p>
+{% endblock %}
