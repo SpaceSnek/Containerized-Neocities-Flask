@@ -5,3 +5,4 @@ __pychache__
 images
 **/images/
 credentials.py
+credentials
