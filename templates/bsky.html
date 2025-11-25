@@ -3,7 +3,7 @@
     <h1>BlueSky Feed</h1>
 {% endblock %}
 {% block content %}
-    <p> Below is the latest post from my BlueSky account!</p>
-    <br>
-    <!--<p> {{ posts }}</p>-->
+    <p> {{ posts[0][0] }}: "{{ posts[0][1] }}"</p>
+    <img src="{{ posts[0][2] }}" alt="Post image" style="width: 50%;">
+    <p> {{ posts[0][3] }}</p>
 {% endblock %}

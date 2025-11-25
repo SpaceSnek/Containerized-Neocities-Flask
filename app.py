@@ -1,6 +1,8 @@
 #Import required libraries
 from flask import Flask, send_from_directory, abort, render_template
 import random, os, requests, json
+from atproto import Client
+import credentials
 
 #Initialize Flask app
 app = Flask(__name__)
@@ -40,6 +42,31 @@ def about():
 @app.route('/blank/')
 def blank():
     return render_template('blank.html')
+
+@app.route('/bsky/')
+def bsky():
+    client = Client()
+    client.login(credentials.username, credentials.password)
+    target_handle = 'spacesnek.shrimplybetter.me'
+
+    feed = client.app.bsky.feed.get_author_feed({'actor': target_handle, 'limit': 1})
+    formattedPost = []
+    for post_view in feed['feed']:
+        try:
+            record = post_view.post.record
+            embed = post_view.post.embed
+            try:
+                embed = embed.images[0].thumb
+            except:
+                embed = ""
+                pass
+            author = post_view.post.author.handle
+            postText = record.text
+            postTime = record.created_at
+            formattedPost.append((author, postText, embed, postTime))
+        except KeyError:
+            formattedPost = "This post has been deleted or is not displaying properly."
+    return render_template('bsky.html', posts=formattedPost)
 #===== End Routing points =====#
 
 #Run the app

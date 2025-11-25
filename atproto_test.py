@@ -4,7 +4,8 @@ client = Client()
 client.login(credentials.username, credentials.password)
 target_handle = 'spacesnek.shrimplybetter.me'
 
-feed = client.app.bsky.feed.get_author_feed({'actor': target_handle, 'limit': 1})
+feed = client.app.bsky.feed.get_author_feed({'actor': target_handle, 'limit': 5})
+formattedPost = []
 for post_view in feed['feed']:
     try:
         record = post_view.post.record
@@ -17,8 +18,6 @@ for post_view in feed['feed']:
         author = post_view.post.author.handle
         postText = record.text
         postTime = record.created_at
-        formattedPost = (author, postText, embed, postTime)
+        formattedPost.append((author, postText, embed, postTime))
     except KeyError:
         formattedPost = "This post has been deleted or is not displaying properly."
-    print(formattedPost[0])
-    print(formattedPost[1])
