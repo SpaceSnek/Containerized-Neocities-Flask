@@ -1,162 +1,164 @@
 /*Establish Body details*/
 body {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    background-color: #497D74;
-    background-image: url("Assets/feesh64xbg.png");
-    font-family: 'Comic Neue';
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #497d74;
+  background-image: url("Assets/feesh64xbg.png");
+  font-family: "Comic Neue";
 }
 /*---------------------------------------------------------*/
 
 /*Grid establishment*/
-.container{
-    display: inline-grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(7, 100px);
-    grid-auto-rows: 100px;
-    grid-auto-columns: 100px;
-    grid-gap: 5px;
-    grid-template-areas:
-        'a main main main main main main b'
-        'a main main main main main main b'
-        'a main main main main main main b'
-        'a main main main main main main b'
-        'a main main main main main main b'
-        'a main main main main main main b'
-        'a footer footer footer footer footer footer b';
-    text-align: center;
-    padding-top: 2%;
+.container {
+  display: inline-grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(7, 100px);
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+  grid-gap: 5px;
+  grid-template-areas:
+    "a main main main main main main b"
+    "a main main main main main main b"
+    "a main main main main main main b"
+    "a main main main main main main b"
+    "a main main main main main main b"
+    "a main main main main main main b"
+    "a footer footer footer footer footer footer b";
+  text-align: center;
+  padding-top: 2%;
 }
-.item{
-    background-color: #27445D;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
+.item {
+  background-color: #27445d;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .item1 {
-    grid-area: main;
+  grid-area: main;
 }
 .item2 {
-    grid-area: footer;
+  grid-area: footer;
 }
 /*---------------------------------------------------------*/
 
 /*Establish Content Divs*/
-.mainContent{
-    height: 610px;
-    width: 610px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #EFE9D5;
+.mainContent {
+  height: 610px;
+  width: 610px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efe9d5;
 }
 .footer {
-    height: 90px;
-    width: 610px;
-    border-radius: 11px;
+  height: 90px;
+  width: 610px;
+  border-radius: 11px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: #EFE9D5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efe9d5;
 }
 /*---------------------------------------------------------*/
 
 /*Establish ACTUAL content*/
 .mainContent-Content {
-    height: 600px;
-    width: 600px;
-    border: 2px dashed #71BBB2;
-    border-radius: 10px;
-    overflow:scroll;
-    text-align: center;
-    position: relative;
+  height: 600px;
+  width: 600px;
+  border: 2px dashed #71bbb2;
+  border-radius: 10px;
+  overflow: scroll;
+  text-align: center;
+  position: relative;
 }
-.footer-Content{
-    height: 90px;
-    width: 610px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-image: url("Assets/tackleBox.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;    
+.footer-Content {
+  height: 90px;
+  width: 610px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("Assets/tackleBox.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .footer-Content:active {
   animation-name: example;
   background-image: url("https://wiki.fishingplanet.com/images/c/c0/Longnose_Gar.png");
-    border-radius: 10px;
+  border-radius: 10px;
   background-size: contain;
   background-position: center;
 }
 
 .footer-Content > img {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 /*nav formatting*/
-a:link, a:visited {
-    display: inline-block;
-    width: 100px;
-    margin: 5px auto;
-    border-radius: 10px;
-    color: #EFE9D5;
-    background-color: #ff6700;
-    text-decoration: none;
+a:link,
+a:visited {
+  display: inline-block;
+  width: 100px;
+  margin: 5px auto;
+  border-radius: 10px;
+  color: #efe9d5;
+  background-color: #ff6700;
+  text-decoration: none;
 }
-a:hover, a:active {
-    margin: 5px auto;
-    background-color: #ff9a00;
+a:hover,
+a:active {
+  margin: 5px auto;
+  background-color: #ff9a00;
 }
 /*---------------------------------------------------------*/
 .badges {
-    display: flex;
-    padding: 5px;
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    width:100%;
-    box-sizing:border-box;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 .post-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
 }
 .posts {
-    padding: 10px;
-    background-color: #27445D;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    color: #EFE9D5;
-    height: 150px;
-    width: 410px;
+  padding: 10px;
+  background-color: #27445d;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #efe9d5;
+  height: 150px;
+  width: 410px;
 }
 .post-image {
-    float: right;
-    width: 60%;
-    max-width: 300px;
-    height: 100%;
-    max-height: 160px;
-    border-radius: 10px;
+  float: right;
+  width: 60%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 160px;
+  border-radius: 10px;
 }
 .post-text {
-    float: left;
-    width: 40%;
+  float: left;
+  width: 40%;
 }
 /*Paragraph styling*/
 p {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*Color palette: https://colorhunt.co/palette/27445d497d7471bbb2efe9d5 */

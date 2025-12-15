@@ -1,24 +1,14 @@
-{% extends 'base.html' %}
-{% block title %}
-    <h1>BlueSky Feed</h1>
-{% endblock %}
-{% block content %}
-    <div class="post-wrapper">
-        <div class="posts">
-            <div class="post-text">
-                <p> {{ posts[0][0] }}: "{{ posts[0][1] }}"</p>
-            </div>
-            <div class="post-image">
-                <img class="post-image" src="{{ posts[0][2] }}" alt="Post image">
-            </div>
-        </div>
-        <div class="posts">
-            <div class="post-text">
-                <p> {{ posts[1][0] }}: "{{ posts[1][1] }}"</p>
-            </div>
-            <div class="post-image">
-                <img class="post-image" src="{{ posts[1][2] }}" alt="Post image">
-            </div>
-        </div>
+{% extends 'base.html' %} {% block title %}
+<h1>BlueSky Feed</h1>
+{% endblock %} {% block content %}
+<div class="post-wrapper">
+  <div class="posts">
+    <div class="post-text">
+      <p>{{ posts[0][0] }}: "{{ posts[0][1] }}"</p>
     </div>
+    <div class="post-image">
+      <img class="post-image" src="{{ posts[0][2] }}" alt="Post image" />
+    </div>
+  </div>
+</div>
 {% endblock %}
